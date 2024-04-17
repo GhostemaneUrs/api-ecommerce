@@ -1,0 +1,28 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios de runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directorios y archivos de build
+build/
+dist/
+
+# Archivos temporales
+tmp
+*.tmp
+*.temp
+
