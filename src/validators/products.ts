@@ -39,6 +39,12 @@ export const valuesProductValidator = [
     .isNumeric()
     .withMessage('Price must be a numeric value'),
 
+  check('stock')
+    .notEmpty()
+    .withMessage('Stock is required')
+    .isInt()
+    .withMessage('Stock must be an integer'),
+
   check('active').optional().isBoolean(),
 
   (req: Request, res: Response, next: NextFunction) =>

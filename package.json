@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node  app.ts",
     "dev": "nodemon --exec  ts-node app.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "seed": "ts-node ./src/seeder/index.ts"
   },
   "keywords": [],
   "author": "",

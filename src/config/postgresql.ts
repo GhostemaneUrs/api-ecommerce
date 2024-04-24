@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import 'reflect-metadata';
 import { DateTime } from 'luxon';
 import { DataSource } from 'typeorm';

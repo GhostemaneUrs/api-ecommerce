@@ -31,6 +31,9 @@ export class Product {
   @Column('decimal', { precision: 10, scale: 2 })
   price: number;
 
+  @Column('int')
+  stock: number;
+
   @Column({ type: 'boolean', default: true })
   active: boolean;
 
