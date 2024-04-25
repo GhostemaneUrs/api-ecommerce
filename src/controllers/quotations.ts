@@ -164,7 +164,10 @@ export const getQuotationById = async (
       price: quotation.price,
       quantity: quotation.quantity,
       user: quotation.user_id.first_name + ' ' + quotation.user_id.last_name,
-      product: quotation.product_id.name,
+      product: {
+        name: quotation.product_id.name,
+        image: quotation.product_id.image,
+      },
     });
   } catch (error) {
     responseError(res, 'Failed to retrieve Quotation', `${error}`, 500);
