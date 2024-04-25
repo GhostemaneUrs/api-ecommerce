@@ -26,4 +26,4 @@ class Cloudinary {
   }
 }
 
-module.exports = Cloudinary;
+export default Cloudinary;
