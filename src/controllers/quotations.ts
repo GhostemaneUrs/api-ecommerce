@@ -158,14 +158,37 @@ export const getQuotationById = async (
       return;
     }
 
-    responseSuccess(res, 'Quotation found', {
+    console.log({
       id: quotation.id,
       active: quotation.active,
       price: quotation.price,
       quantity: quotation.quantity,
-      user: quotation.user_id.first_name + ' ' + quotation.user_id.last_name,
-      product: {
-        name: quotation.product_id.name,
+      user_id: {
+        value: quotation.user_id.id,
+        label: quotation.user_id.first_name + ' ' + quotation.user_id.last_name,
+      },
+      product_id: {
+        label: quotation.product_id.name,
+        value: quotation.product_id.id,
+        price: quotation.product_id.price,
+        stock: quotation.product_id.stock,
+        image: quotation.product_id.image,
+      },
+    });
+
+    responseSuccess(res, 'Quotation found', {
+      id: quotation.id,
+      active: quotation.active,
+      quantity: Number(quotation.quantity),
+      user_id: {
+        value: quotation.user_id.id,
+        label: quotation.user_id.first_name + ' ' + quotation.user_id.last_name,
+      },
+      product_id: {
+        label: quotation.product_id.name,
+        value: quotation.product_id.id,
+        price: quotation.product_id.price,
+        stock: quotation.product_id.stock,
         image: quotation.product_id.image,
       },
     });
