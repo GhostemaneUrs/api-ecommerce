@@ -1,3 +1,5 @@
+import 'dotenv/config';
+import 'reflect-metadata';
 import { v2 as cloudinary } from 'cloudinary';
 
 class Cloudinary {
